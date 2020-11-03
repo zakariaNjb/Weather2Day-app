@@ -1,0 +1,227 @@
+    html {
+        height: 100%;
+    }
+    
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.781);
+    }
+    
+    #frame {
+        background-color: black;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px;
+        height: 95%;
+        top: 2.5%;
+        width: 90%;
+        left: 5%;
+    }
+    
+    img.fullImg {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    
+    #anotherFrame {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    /*******mENU*********/
+    
+    section.Menu {
+        display: flex;
+        width: 100%;
+        padding: 10px 0;
+        justify-content: center;
+    }
+    
+    section.Menu input {
+        border: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        color: snow;
+        text-align: center;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.651);
+    }
+    
+    section.Menu i {
+        transition-duration: 300ms;
+        padding: 5px;
+        color: snow;
+        font-weight: bold;
+    }
+    
+    section.Menu i:hover {
+        transform: scale(1.4);
+        font-weight: bolder;
+    }
+    
+    section.Menu button {
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.678);
+        border-radius: 5px;
+    }
+    /*************weather info*************/
+    
+    div.weatherInfo {
+        position: relative;
+        top: 0%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    
+    div.weatherInfo img {
+        grid-column: 1/4;
+        justify-self: center;
+        align-self: center;
+        width: 170px;
+        height: 170px;
+    }
+    
+    div.weatherInfo :nth-child(2) {
+        padding: 0;
+        grid-column: 4/9;
+    }
+    
+    div.weatherInfo :nth-child(2) li:nth-child(1) {
+        color: aqua;
+        font-size: 2.3em;
+        font-style: italic;
+        font-weight: bolder;
+        text-shadow: 5px 5px 10px black;
+    }
+    
+    div.weatherInfo :nth-child(2) li:nth-child(2) {
+        color: darkorange;
+        font-weight: bolder;
+        font-size: 1.2em;
+        text-shadow: 5px 5px 5px black;
+    }
+    
+    div.weatherInfo :nth-child(2) li:nth-child(3) {
+        color: snow;
+        font-weight: bolder;
+        font-size: 1.1em;
+        text-shadow: 5px 5px 10px black;
+    }
+    
+    div.weatherInfo :nth-child(2) li:nth-child(4) {
+        color: snow;
+        font-weight: bolder;
+        font-size: 0.9em;
+        text-shadow: 5px 5px 10px black;
+    }
+    
+    div.weatherInfo :nth-child(2) li:nth-child(5) {
+        color: snow;
+        font-weight: bolder;
+        font-size: 0.8em;
+        text-shadow: 5px 5px 10px black;
+    }
+    
+    div.weatherInfo ul:nth-child(3) {
+        /************for location info***********/
+        display: none;
+    }
+    /*************next days weather***********/
+    
+    div.nextDays {
+        width: 95%;
+        left: 2.5%;
+        position: absolute;
+        bottom: 2%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div.nextDays a {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.5em;
+        border: 1px groove snow;
+        color: snow;
+        text-shadow: 5px 5px 20px black;
+        box-shadow: 5px 5px 20px;
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+    
+    div.nextDays a img {
+        width: 60px;
+        height: 60px;
+    }
+    /***********Media queries************/
+    
+    @media screen and (min-width:550px) {
+        div.weatherInfo i {
+            font-size: 6em;
+        }
+    }
+    /**********750px*********/
+    
+    @media screen and (min-width:930px) {
+        body {
+            font-size: 22px;
+        }
+        div.weatherInfo img {
+            width: 200px;
+            height: 200px;
+            justify-self: start;
+            padding-left: 10px;
+            grid-column: 1/3;
+        }
+        div.weatherInfo :nth-child(2) {
+            padding: 0;
+            grid-column: 3/6;
+            padding-left: 0px;
+        }
+        div.weatherInfo ul:nth-child(3) {
+            display: block;
+            grid-column: 6/9;
+            justify-self: start;
+        }
+        div.weatherInfo ul:nth-child(3) li {
+            text-align: center;
+        }
+        div.weatherInfo ul:nth-child(3) li:nth-child(1) {
+            font-size: 2.5em;
+            font-style: italic;
+            font-weight: bolder;
+            text-shadow: 5px 5px 10px snow;
+        }
+        div.weatherInfo ul:nth-child(3) li:nth-child(2) {
+            font-weight: bolder;
+            font-size: 2em;
+            text-shadow: 5px 5px 10px snow;
+        }
+        div.weatherInfo ul:nth-child(3) li:nth-child(3) {
+            font-weight: bolder;
+            font-size: 1.5em;
+            text-shadow: 5px 5px 10px snow;
+        }
+    }
+    /*************1020px***************/
+    
+    @media screen and (min-width:550px) {
+        #frame {
+            width: 70%;
+            left: 15%;
+        }
+    }
